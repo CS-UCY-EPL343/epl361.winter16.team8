@@ -1,22 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
-
-		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-		Remove this if you use the .htaccess -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-		<link rel="shortcut icon" href="/favicon.ico">
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-		<link rel="css/font-awesome.min.css">
-
-		<link rel="stylesheet" href="w3.css">
+		<link rel="stylesheet" href="css/w3.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<style>
 			.w3-sidenav a {
 				font-family: "Roboto", sans-serif
@@ -25,209 +15,205 @@
 				font-family: "Montserrat", sans-serif;
 			}
 		</style>
+		<body onload="isLogin()" class="w3-content" style="max-width:1600px">
 
+			<div id="coverround" style="position:relative;z-index:100;">
+				<a href="laGalerie.html"><img id="cover" class="img-responsive" alt="cover" src="pictures/cover.jpg"
+				height="100%" width="100%"></a>
+			</div>
+
+			<div id="mainnav" class="navbar navbar-default" style="position:relative;z-index:100;">
+				<div class="container-fluid">
+
+					<nav class="navbar navbar-default">
+						<div class="container-fluid">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse"
+								data-target="#myNavbar">
+									<span class="icon-bar"></span><span class="icon-bar"></span><span
+									class="icon-bar"></span>
+								</button>
+								<a href="laGalerie.html"> <img class="img-rounded" alt="logo"
+								src="pictures/logo.jpg" width="100" height="100"> </a>
+							</div>
+							<div class="collapse navbar-collapse" id="myNavbar">
+								<ul class="nav navbar-nav">
+									<li>
+										<a href="Announcements.html">Announcements </a>
+									</li>
+
+									<li class="dropdown">
+										<a class="dropdown-toggle"
+										data-toggle="dropdown" href="Categories.html">Categories <span
+										class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li>
+												<a href="#">Birthday Cakes</a>
+											</li>
+											<li>
+												<a href="#">Wedding Cakes</a>
+											</li>
+											<li>
+												<a href="#">Christening Cakes</a>
+											</li>
+											<li>
+												<a href="#">...</a>
+											</li>
+										</ul>
+									</li>
+
+									<li>
+										<a href="videos.html">Videos <span
+										class="glyphicon glyphicon-film"></span></a>
+									</li>
+
+									<li>
+										<a href="Forum.html">Forum <span
+										class="glyphicon glyphicon-pencil"></span></a>
+									</li>
+
+									<li>
+										<a href="cityCenter.html">Find a Store <span
+										class="glyphicon glyphicon-globe"></span></a>
+									</li>
+
+									<li>
+										<a href="ContactUs.html"> Contact Us <span
+										class="glyphicon glyphicon-phone-alt"></span></a>
+									</li>
+
+								</ul>
+
+								<ul class="navbar-nav navbar-right"></ul>
+								<ul class="nav navbar-nav navbar-right btn-group-vertical">
+
+									<li align="right">
+										<a id="signup" class="btn" href="SignUp.html"> Sign Up/Login <span
+										class="glyphicon glyphicon-user"></span> </a>
+										<form class="navbar-form navbar-right">
+											<div class="form-group">
+												<input type="text" class="form-control"
+												placeholder="Search...">
+											</div>
+											<a href="Search"><span class="glyphicon glyphicon-search"></span></a>
+										</form>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</nav>
+
+				</div>
+			</div>
+			<script>
+				window.onscroll = function() {
+					var x = document.getElementById("cover").height;
+					var y = document.getElementById("mainnav").height;
+					y = 2 * y;
+					if (document.body.scrollTop > x || document.documentElement.scrollTop > x) {
+
+						document.getElementById("coverround").style = "padding-bottom:150px";
+						document.getElementById("mainnav").className = "navbar navbar-fixed-top";
+					} else {
+						document.getElementById("coverround").style = "padding-bottom:0px;position:relative;z-index:100";
+						document.getElementById("mainnav").className = "navbar navbar-default";
+						document.getElementById("mainnav").style = "z-index:100;";
+					}
+				};
+			</script>
 	</head>
-
-	<body class="w3-content">
-		<div id="coverround" style="padding-bottom:0px">
-			<a href="laGalerie.html"><img id="cover" class="img-responsive" alt="cover" src="pictures/cover.jpg"
-			height="100%" width="100%"></a>
+	<!-- Sidenav/menu -->
+	<nav class="w3-sidenav w3-white w3-collapse w3-topnav" style="z-index:3;width:250px;" id="mySidenav">
+		<div class="w3-container w3-padding-16">
+			<h3 class="w3-wide"><b>TIMELINE</b></h3>
 		</div>
+		<div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+			<a href="#">2016</a>
+			<a href="#">2015</a>
+			<a href="#">2014</a>
+			<a href="#">2013</a>
+		</div>
+		<a href="ContactUs.html" class="w3-padding">Contact</a>
+	</nav>
 
-		<div id="mainnav" class="navbar navbar-default">
-			<div class="container-fluid">
+	<div class="jumbotron" style="padding-left: 280px">
 
-				<nav class="navbar navbar-default">
-					<div class="container-fluid">
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse"
-							data-target="#myNavbar">
-								<span class="icon-bar"></span><span class="icon-bar"></span><span
-								class="icon-bar"></span>
-							</button>
-							<a href="laGalerie.html"> <img class="img-rounded" alt="logo"
-							src="pictures/logo.jpg" width="100" height="100"> </a>
-						</div>
-						<div class="collapse navbar-collapse" id="myNavbar">
-							<ul class="nav navbar-nav">
-								<li>
-									<a href="Announcements.html">Announcements </a>
-								</li>
+		<div class="blog-post">
+			<h4 class="blog-post-title">We are hiring</h4>
+			<p class="blog-post-meta">
+				<i>October 26, 2016</i>
+			</p>
 
-								<li class="dropdown">
-									<a class="dropdown-toggle"
-									data-toggle="dropdown" href="Categories.html">Categories <span
-									class="caret"></span></a>
-									<ul class="dropdown-menu">
-										<li>
-											<a href="birthdaycake.html">Birthday Cakes</a>
-										</li>
-										<li>
-											<a href="#">Wedding Cakes</a>
-										</li>
-										<li>
-											<a href="#">Christening Cakes</a>
-										</li>
-										<li>
-											<a href="#">...</a>
-										</li>
-									</ul>
-								</li>
+			<p>
 
-								<li>
-									<a href="videos.html">Videos <span
-									class="glyphicon glyphicon-film"></span></a>
-								</li>
+				To La Galerie by Galactica Patisserie ζητά να προσλάβει έμπειρο προσωπικό
+				<br>
+				για την πιο κάτω θέση εργασίας!
+				Εάν ενδιαφέρεστε να ενταχθείτε στο ανθρώπινο δυναμικό μας,
+				<br>
+				μπορείτε να αποστείλετε το βιογραφικό σας
+				σημείωμα στο <a href="mailto:info@lagaleriepatisserie.com" target="_top">info@lagaleriepatisserie.com </a>
+			</p>
 
-								<li>
-									<a href="Forum.html">Forum <span
-									class="glyphicon glyphicon-pencil"></span></a>
-								</li>
+			<hr>
 
-								<li>
-									<a href="cityCenter.html">Find a Store <span
-									class="glyphicon glyphicon-globe"></span></a>
-								</li>
-
-								<li>
-									<a href="ContactUs.html"> Contact Us <span
-									class="glyphicon glyphicon-phone-alt"></span></a>
-								</li>
-
-							</ul>
-
-							<ul class="navbar-nav navbar-right"></ul>
-							<ul class="nav navbar-nav navbar-right btn-group-vertical">
-
-								<li align="right">
-									<a href="SignUp.html"> Sign Up/Login <span
-									class="glyphicon glyphicon-user"></span></a>
-									<form class="navbar-form navbar-right">
-										<div class="form-group">
-											<input type="text" class="form-control"
-											placeholder="Search...">
-										</div>
-										<a href="Search"><span class="glyphicon glyphicon-search"></span></a>
-									</form>
-								</li>
-
-							</ul>
-						</div>
-					</div>
-				</nav>
-
+			<div class="col-sm-12">
+				<a tabindex="-1" href="#"> <img class="img-responsive" src="pictures/announcment(1).jpg" /> </a>
 			</div>
 		</div>
-		<script>
-			window.onscroll = function() {
-				var x = document.getElementById("cover").height;
-				var y = document.getElementById("mainnav").height;
-				y = 2 * y;
-				if (document.body.scrollTop > x || document.documentElement.scrollTop > x) {
 
-					document.getElementById("coverround").style = "padding-bottom:150px";
-					document.getElementById("mainnav").className = "navbar navbar-fixed-top";
-				} else {
-					document.getElementById("coverround").style = "padding-bottom:0px";
-					document.getElementById("mainnav").className = "navbar navbar-default";
-				}
-			};
-		</script>
+		<p>
+			&nbsp;
+		</p>
 
-		<div class="w3-content" style="max-width:1200px">
-
-			<!-- Sidenav/menu -->
-			<nav class="w3-sidenav w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidenav">
-				<div class="w3-container w3-padding-16">
-					<i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-closebtn w3-hover-text-red"></i>
-					<h3 class="w3-wide"><b>TIMELINE</b></h3>
-				</div>
-				<div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-					<br>
-					<a href="#">2016</a></br>
-					<br>
-					<a href="#">2015</a></br>
-					<br>
-					<a href="#">2014</a></br>
-
-				</div>
-			</nav>
-
-			<!-- !PAGE CONTENT! -->
-			<div class="w3-main" style="margin-left:250px">
-				<!-- Top header -->
-
-				<div class="row">
-					<header class="w3-container w3-xlarge">
-						<p class="w3-center">
-							Announcements
-						</p>
-
-					</header>
-					<div class="w3-display-container w3-container">
-
-						<div class="blog-post">
-							<h4 class="blog-post-title">We are hiring</h4>
-							<p class="blog-post-meta">
-								<i>October 26, 2016</i>
-							</p>
-
-							<p>
-
-								To La Galerie by Galactica Patisserie ζητά να προσλάβει έμπειρο προσωπικό
-								<br>
-								για την πιο κάτω θέση εργασίας!
-								Εάν ενδιαφέρεστε να ενταχθείτε στο ανθρώπινο δυναμικό μας,</br> μπορείτε να αποστείλετε το βιογραφικό σας
-								σημείωμα στο <a href="mailto:info@lagaleriepatisserie.com" target="_top">info@lagaleriepatisserie.com </a>
-							</p>
-
-							<hr>
-
-							<div class="col-sm-12">
-								<a tabindex="-1" href="#"> <img class="img-responsive" src="pictures/announcment(1).jpg" /> </a>
-							</div>
-						</div>
-
-						<p>
-							&nbsp;
-						</p>
-
-						<div class="blog-post">
-							<h4 class="blog-post-title">We are hiring</h4>
-							<p class="blog-post-meta">
-								<i>May 4, 2016</i>
-							</p>
-							<p>
-
-								To La Galerie by Galactica Patisserie ζητά να προσλάβει προσωπικό
-								<br>
-								για την πιο κάτω θέση εργασίας!
-								Εάν ενδιαφέρεστε να ενταχθείτε στο ανθρώπινο δυναμικό μας,</br> μπορείτε να αποστείλετε το βιογραφικό σας
-								σημείωμα στο <a href="mailto:info@lagaleriepatisserie.com" target="_top">info@lagaleriepatisserie.com </a>
-							</p>
-							<hr>
-							<div class="col-sm-4">
-								<a tabindex="-1" href="#"> <img class="img-responsive" src="pictures/announcment(2).jpg" /> </a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- FOOTER -->
-		<footer>
-			<p class="pull-right">
-				<a href="#">Back to top</a>
+		<div class="blog-post">
+			<h4 class="blog-post-title">We are hiring</h4>
+			<p class="blog-post-meta">
+				<i>May 4, 2016</i>
 			</p>
 			<p>
-				&copy; 2016 La Galerie Patisserie by Galactica &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+
+				To La Galerie by Galactica Patisserie ζητά να προσλάβει προσωπικό
+				<br>
+				για την πιο κάτω θέση εργασίας!
+				Εάν ενδιαφέρεστε να ενταχθείτε στο ανθρώπινο δυναμικό μας,
+				<br>
+				μπορείτε να αποστείλετε το βιογραφικό σας
+				σημείωμα στο <a href="mailto:info@lagaleriepatisserie.com" target="_top">info@lagaleriepatisserie.com </a>
 			</p>
-		</footer>
-		<!-- /.container -->
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="js/bootstrap.min.js"></script>
+			<hr>
+			<div class="col-sm-4">
+				<a tabindex="-1" href="#"> <img class="img-responsive" src="pictures/announcment(2).jpg" /> </a>
+			</div>
+		</div>
+
+	</div>
+
+	<script>
+		// Accordion
+		function myAccFunc() {
+			var x = document.getElementById("demoAcc");
+			if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+			} else {
+				x.className = x.className.replace(" w3-show", "");
+			}
+		}
+
+		// Click on the "Jeans" link on page load to open the accordion for demo purposes
+		document.getElementById("myBtn").click();
+
+		// Script to open and close sidenav
+		function w3_open() {
+			document.getElementById("mySidenav").style.display = "block";
+			document.getElementById("myOverlay").style.display = "block";
+		}
+
+		function w3_close() {
+			document.getElementById("mySidenav").style.display = "none";
+			document.getElementById("myOverlay").style.display = "none";
+		}
+	</script>
 	</body>
 </html>
