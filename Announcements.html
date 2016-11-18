@@ -8,21 +8,27 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>Announcements</title>
-
-		<!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width; initial-scale=1.0">
-
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="css/font-awesome.min.css">
+
+		<link rel="stylesheet" href="w3.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+		<style>
+			.w3-sidenav a {
+				font-family: "Roboto", sans-serif
+			}
+			body, h1, h2, h3, h4, h5, h6, .w3-wide {
+				font-family: "Montserrat", sans-serif;
+			}
+		</style>
+
 	</head>
 
-	<body>
+	<body class="w3-content">
 		<div id="coverround" style="padding-bottom:0px">
 			<a href="laGalerie.html"><img id="cover" class="img-responsive" alt="cover" src="pictures/cover.jpg"
 			height="100%" width="100%"></a>
@@ -112,7 +118,6 @@
 
 			</div>
 		</div>
-		</head>
 		<script>
 			window.onscroll = function() {
 				var x = document.getElementById("cover").height;
@@ -128,79 +133,95 @@
 				}
 			};
 		</script>
-	
-	<body>
-		<div>
-			<header>
 
-				<h1 style="text-align:center;">Announcements</h1>
+		<div class="w3-content" style="max-width:1200px">
 
-			</header>
+			<!-- Sidenav/menu -->
+			<nav class="w3-sidenav w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidenav">
+				<div class="w3-container w3-padding-16">
+					<i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-closebtn w3-hover-text-red"></i>
+					<h3 class="w3-wide"><b>TIMELINE</b></h3>
+				</div>
+				<div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+					<br>
+					<a href="#">2016</a></br>
+					<br>
+					<a href="#">2015</a></br>
+					<br>
+					<a href="#">2014</a></br>
 
-		</div>
+				</div>
+			</nav>
 
-		<div class="row">
+			<!-- !PAGE CONTENT! -->
+			<div class="w3-main" style="margin-left:250px">
+				<!-- Top header -->
 
-			<div class="col-sm-8 blog-main">
+				<div class="row">
+					<header class="w3-container w3-xlarge">
+						<p class="w3-center">
+							Announcments
+						</p>
 
-				<div class="blog-post">
-					<h3 class="blog-post-title">We are hiring</h3>
-					<p class="blog-post-meta">
-						<i>October 26, 2016</i>
-					</p>
+					</header>
+					<div class="w3-display-container w3-container">
 
-					<p>
+						<div class="blog-post">
+							<h4 class="blog-post-title">We are hiring</h4>
+							<p class="blog-post-meta">
+								<i>October 26, 2016</i>
+							</p>
 
-						To La Galerie by Galactica Patisserie ζητά να προσλάβει έμπειρο προσωπικό
-						<br>
-						για την πιο κάτω θέση εργασίας!
-						Εάν ενδιαφέρεστε να ενταχθείτε στο ανθρώπινο δυναμικό μας,</br> μπορείτε να αποστείλετε το βιογραφικό σας
-						σημείωμα στο <a href="mailto:info@lagaleriepatisserie.com" target="_top">info@lagaleriepatisserie.com </a>
-					</p>
+							<p>
 
-					<hr>
+								To La Galerie by Galactica Patisserie ζητά να προσλάβει έμπειρο προσωπικό
+								<br>
+								για την πιο κάτω θέση εργασίας!
+								Εάν ενδιαφέρεστε να ενταχθείτε στο ανθρώπινο δυναμικό μας,</br> μπορείτε να αποστείλετε το βιογραφικό σας
+								σημείωμα στο <a href="mailto:info@lagaleriepatisserie.com" target="_top">info@lagaleriepatisserie.com </a>
+							</p>
 
-					<div class="col-sm-12">
-						<a tabindex="-1" href="#"> <img class="img-responsive" src="pictures/announcment(1).jpg" /> </a>
+							<hr>
+
+							<div class="col-sm-12">
+								<a tabindex="-1" href="#"> <img class="img-responsive" src="pictures/announcment(1).jpg" /> </a>
+							</div>
+						</div>
+
+						<p>
+							&nbsp;
+						</p>
+
+						<div class="blog-post">
+							<h4 class="blog-post-title">We are hiring</h4>
+							<p class="blog-post-meta">
+								<i>May 4, 2016</i>
+							</p>
+							<p>
+
+								To La Galerie by Galactica Patisserie ζητά να προσλάβει προσωπικό
+								<br>
+								για την πιο κάτω θέση εργασίας!
+								Εάν ενδιαφέρεστε να ενταχθείτε στο ανθρώπινο δυναμικό μας,</br> μπορείτε να αποστείλετε το βιογραφικό σας
+								σημείωμα στο <a href="mailto:info@lagaleriepatisserie.com" target="_top">info@lagaleriepatisserie.com </a>
+							</p>
+							<hr>
+							<div class="col-sm-4">
+								<a tabindex="-1" href="#"> <img class="img-responsive" src="pictures/announcment(2).jpg" /> </a>
+							</div>
+						</div>
 					</div>
 				</div>
-				
-				<p>&nbsp;</p>
-
-				<div class="blog-post">
-					<h2 class="blog-post-title">We are hiring</h2>
-					<p class="blog-post-meta">
-						<i>May 4, 2016</i>
-					</p>
-
-					<p>
-
-						To La Galerie by Galactica Patisserie ζητά να προσλάβει προσωπικό
-						<br>
-						για την πιο κάτω θέση εργασίας!
-						Εάν ενδιαφέρεστε να ενταχθείτε στο ανθρώπινο δυναμικό μας,</br> μπορείτε να αποστείλετε το βιογραφικό σας
-						σημείωμα στο <a href="mailto:info@lagaleriepatisserie.com" target="_top">info@lagaleriepatisserie.com </a>
-					</p>
-
-					<hr>
-
-					<div class="col-sm-4">
-						<a tabindex="-1" href="#"> <img class="img-responsive" src="pictures/announcment(2).jpg" /> </a>
-					</div>
-				</div>
-
 			</div>
-
 		</div>
+		<!-- FOOTER -->
+		<footer>
+			<p class="pull-right">
+				<a href="#">Back to top</a>
+			</p>
+			<p>
+				&copy; 2016 La Galerie Patisserie by Galactica &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+			</p>
+		</footer>
 	</body>
-
-	<!-- FOOTER -->
-	<footer>
-		<p class="pull-right">
-			<a href="#">Back to top</a>
-		</p>
-		<p>
-			&copy; 2016 La Galerie Patisserie by Galactica &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
-		</p>
-	</footer>
 </html>
