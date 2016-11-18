@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Announcements</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	</head>
+
+	<body>
+		<div id="coverround" style="padding-bottom:0px">
+			<a href="laGalerie.html"><img id="cover" class="img-responsive" alt="cover" src="pictures/cover.jpg"
+			height="100%" width="100%"></a>
+		</div>
+
+		<div id="mainnav" class="navbar navbar-default">
+			<div class="container-fluid">
+
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target="#myNavbar">
+								<span class="icon-bar"></span><span class="icon-bar"></span><span
+								class="icon-bar"></span>
+							</button>
+							<a href="laGalerie.html"> <img class="img-rounded" alt="logo"
+							src="pictures/logo.jpg" width="100" height="100"> </a>
+						</div>
+						<div class="collapse navbar-collapse" id="myNavbar">
+							<ul class="nav navbar-nav">
+								<li>
+									<a href="Announcements.html">Announcements </a>
+								</li>
+
+								<li class="dropdown">
+									<a class="dropdown-toggle"
+									data-toggle="dropdown" href="Categories.html">Categories <span
+									class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="birthdaycake.html">Birthday Cakes</a>
+										</li>
+										<li>
+											<a href="#">Wedding Cakes</a>
+										</li>
+										<li>
+											<a href="#">Christening Cakes</a>
+										</li>
+										<li>
+											<a href="#">...</a>
+										</li>
+									</ul>
+								</li>
+
+								<li>
+									<a href="videos.html">Videos <span
+									class="glyphicon glyphicon-film"></span></a>
+								</li>
+
+								<li>
+									<a href="Forum.html">Forum <span
+									class="glyphicon glyphicon-pencil"></span></a>
+								</li>
+
+								<li>
+									<a href="cityCenter.html">Find a Store <span
+									class="glyphicon glyphicon-globe"></span></a>
+								</li>
+
+								<li>
+									<a href="ContactUs.html"> Contact Us <span
+									class="glyphicon glyphicon-phone-alt"></span></a>
+								</li>
+
+							</ul>
+
+							<ul class="navbar-nav navbar-right"></ul>
+							<ul class="nav navbar-nav navbar-right btn-group-vertical">
+
+								<li align="right">
+									<a href="SignUp.html"> Sign Up/Login <span
+									class="glyphicon glyphicon-user"></span></a>
+									<form class="navbar-form navbar-right">
+										<div class="form-group">
+											<input type="text" class="form-control"
+											placeholder="Search...">
+										</div>
+										<a href="Search"><span class="glyphicon glyphicon-search"></span></a>
+									</form>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</nav>
+
+			</div>
+		</div>
+		</head>
+		<script>
+			window.onscroll = function() {
+				var x = document.getElementById("cover").height;
+				var y = document.getElementById("mainnav").height;
+				y = 2 * y;
+				if (document.body.scrollTop > x || document.documentElement.scrollTop > x) {
+
+					document.getElementById("coverround").style = "padding-bottom:150px";
+					document.getElementById("mainnav").className = "navbar navbar-fixed-top";
+				} else {
+					document.getElementById("coverround").style = "padding-bottom:0px";
+					document.getElementById("mainnav").className = "navbar navbar-default";
+				}
+			};
+		</script>
+	<body>
+		<div>
+			<header>
+
+				<h1 style="text-align:center;"> Forum </h1>
+
+				<!--- TESTING --->
+				<div role="main" id="yui_3_17_2_1_1479409776212_118">
+					<span id="maincontent"></span><h2 id="yui_3_17_2_1_1479409776212_117">News forum</h2>
+					<div id="intro" class="box generalbox">
+						<div class="no-overflow">
+							<i>General news and announcements</i>
+						</div>
+					</div>
+
+					<table cellspacing="0" class="forumheaderlist">
+						<thead>
+							<tr>
+								<th class="header topic" scope="col">Discussion</th>
+								<th class="header discussionsubscription" scope="col"><span class="preload-subscribe">&nbsp;</span><span class="preload-unsubscribe">&nbsp;</span></th>
+							</tr>
+						</thead>
+						<tbody>
+
+							<tr class="discussion r0">
+								<td class="topic starter"><a href="ForumSubmit.html">Σχόλια για εξυπηρέτηση</a></td>
+
+								<!--
+								<td class="author">Admin</a></td>
+								-->
+
+								<br>
+							</tr>
+
+							<tr class="discussion r0">
+								<td class="topic starter"><a href="ForumSubmit.html">Ανακοινώσεις για προσφορές</a></td>
+
+								<!--
+								<td class="author">Admin</a></td>
+								-->
+
+								<br>
+							</tr>
+
+						</tbody>
+					</table><div class="paging"></div>
+				</div>
+
+			</header>
+
+		</div>
