@@ -23,7 +23,7 @@
 				background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)), url("pictures/askisi1.jpg");
 				background-repeat: no-repeat;
 				background-size: 100% 100%;
-				background-attachment:fixed;
+				background-attachment: fixed;
 			}
 		</style>
 	</head>
@@ -126,19 +126,19 @@
 				if (document.body.scrollTop > x || document.documentElement.scrollTop > x) {
 					document.getElementById("coverround").style = "padding-bottom:150px";
 					document.getElementById("mainnav").className = "navbar navbar-fixed-top";
-					document.getElementById("dates").style = "padding-left: 40px; padding-top: " + (10) + "px; position:fixed;";
+					document.getElementById("dates").style = "background:#888888; border:1px solid #888888; padding-left: 40px; padding-top: " + (10) + "px; position:fixed;";
 
 				} else {
 					document.getElementById("coverround").style = "padding-bottom:0px;position:relative;z-index:100";
 					document.getElementById("mainnav").className = "navbar navbar-default";
 					document.getElementById("mainnav").style = "z-index:100;";
-					document.getElementById("dates").style = "padding-left: 40px; padding-top: 10px; position:fixed;";
+					document.getElementById("dates").style = "background:#888888; border:1px solid #888888; padding-left: 40px; padding-top: 10px; position:fixed;";
 				}
 			};
 		</script>
 
-		<div id="dates" style="padding-left: 40px; padding-top: 10px; position:fixed; ">
-			<div style="width:200px;height:500px; ">
+		<div id="dates" style="background:#888888; padding-left: 40px; padding-top: 10px; position:fixed; ">
+			<div style="width:200px;height:450px; ">
 				<h3>
 				<p style="color:white;" >
 					TIMELINE
