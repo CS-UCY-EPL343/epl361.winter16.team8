@@ -9,6 +9,7 @@
 
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -131,8 +132,7 @@
 				}
 			};
 		</script>
-		
-		
+
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-1 col-lg-4">
@@ -161,13 +161,17 @@
 					<h1 class="center-block">Macaroons</h1>
 					<br>
 					<br>
-					<p>A small circular cake made from ground almonds,
-						 coconut, with sugar, egg white, lots of
-						 flavorings, food coloring, glace cherries, 
-						 jam and/or a chocolate coating.</p>
+					<p>
+						A small circular cake made from ground almonds,
+						coconut, with sugar, egg white, lots of
+						flavorings, food coloring, glace cherries,
+						jam and/or a chocolate coating.
+					</p>
 					<br>
 					<h4>€2.25</h4>
-					<button id="cart">Add to cart</button>
+					<button id="cart">
+						Add to cart
+					</button>
 					<input id="fff" name="quantity" type="number" value="1" onchange="calculateTotal()"/>
 				</div>
 				<div class="col-xs-6 col-lg-4">
@@ -181,11 +185,11 @@
 		<script>
 			var price = 2.25;
 			var total_price = 2.25;
-			
-			function calculateTotal(){
-				total_price = price*document.getElementById("fff").value;
+
+			function calculateTotal() {
+				total_price = price * document.getElementById("fff").value;
 				var a = total_price.toFixed(2);
-				document.getElementById("totp").innerHTML="TOTAL PRICE: €"+a;
+				document.getElementById("totp").innerHTML = "TOTAL PRICE: €" + a;
 			}
 		</script>
 		<!-- /.carousel -->
