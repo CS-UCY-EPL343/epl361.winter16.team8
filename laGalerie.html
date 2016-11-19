@@ -100,19 +100,37 @@
 
 							</ul>
 
-							<ul class="navbar-nav navbar-right"></ul>
-							<ul class="nav navbar-nav navbar-right btn-group-vertical">
+							<ul class="nav navbar-nav navbar-right btn-group-vertical" role="group">
 
 								<li align="right">
-									<a href="SignUp.html"> Sign Up/Login <span
-									class="glyphicon glyphicon-user"></span></a>
-									<form class="navbar-form navbar-right">
-										<div class="form-group">
-											<input type="text" class="form-control"
-											placeholder="Search...">
-										</div>
-										<a href="Search"><span class="glyphicon glyphicon-search"></span></a>
-									</form>
+									<!--a href="SignUp.html"> Sign Up/Login <span
+									class="glyphicon glyphicon-user"></span></a-->
+								<li class="dropdown">
+									<a class="dropdown-toggle"
+									data-toggle="dropdown" href="Categories.html">Welcome, Admin <span
+									class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">Cart</a>
+										</li>
+										<li>
+											<a href="#">Order History</a>
+										</li>
+										<li>
+											<a href="#">Settings</a>
+										</li>
+										<li>
+											<a href="#">Logout</a>
+										</li>
+									</ul>
+								</li>
+								<form class="navbar-form navbar-right">
+									<div class="form-group">
+										<input type="text" class="form-control"
+										placeholder="Search...">
+									</div>
+									<a href="Search"><span class="glyphicon glyphicon-search"></span></a>
+								</form>
 								</li>
 
 							</ul>
