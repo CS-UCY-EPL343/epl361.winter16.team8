@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
 		<title>announcement</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,255 +19,211 @@
 			body {
 				background-color: rgb(25, 25, 25);
 				background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)), url("pictures/askisi1.jpg");
-				background-repeat: repeat-y;	
+				background-repeat: repeat-y;
 				background-size: 100% 150vh;
 				background-attachment: scroll;
-				
 			}
 		</style>
-		<body onload="isLogin()" class="w3-content" style="max-width:1600px">
-
-			<div id="coverround" style="position:relative;z-index:100;">
-				<a href="laGalerie.html"><img id="cover" class="img-responsive" alt="cover" src="pictures/cover.jpg"
-				height="100%" width="100%"></a>
-			</div>
-
-			<div id="mainnav" class="navbar navbar-default" style="position:relative;z-index:100;">
-				<div class="container-fluid">
-
-					<nav class="navbar navbar-default">
-						<div class="container-fluid">
-							<div class="navbar-header">
-								<button type="button" class="navbar-toggle" data-toggle="collapse"
-								data-target="#myNavbar">
-									<span class="icon-bar"></span><span class="icon-bar"></span><span
-									class="icon-bar"></span>
-								</button>
-								<a href="laGalerie.html"> <img class="img-rounded" alt="logo"
-								src="pictures/logo.jpg" width="100" height="100"> </a>
-							</div>
-							<div class="collapse navbar-collapse" id="myNavbar">
-								<ul class="nav navbar-nav">
-									<li>
-										<a href="Announcements.html">Announcements </a>
-									</li>
-
-									<li class="dropdown">
-										<a class="dropdown-toggle"
-										data-toggle="dropdown" href="Categories.html">Categories <span
-										class="caret"></span></a>
-										<ul class="dropdown-menu">
-											<li>
-												<a href="birthdaycake.html">Birthday Cakes</a>
-											</li>
-											<li>
-												<a href="weddingCakes.html">Wedding Cakes</a>
-											</li>
-											<li>
-												<a href="christeningCakes.html">Christening Cakes</a>
-											</li>
-											<li>
-												<a href="#">...</a>
-											</li>
-										</ul>
-									</li>
-
-									<li>
-										<a href="videos.html">Videos <span
-										class="glyphicon glyphicon-film"></span></a>
-									</li>
-
-									<li>
-										<a href="Forum.html">Forum <span
-										class="glyphicon glyphicon-pencil"></span></a>
-									</li>
-
-									<li>
-										<a href="cityCenter.html">Find a Store <span
-										class="glyphicon glyphicon-globe"></span></a>
-									</li>
-
-									<li>
-										<a href="ContactUs.html"> Contact Us <span
-										class="glyphicon glyphicon-phone-alt"></span></a>
-									</li>
-
-								</ul>
-
-								<ul class="navbar-nav navbar-right"></ul>
-								<ul class="nav navbar-nav navbar-right btn-group-vertical">
-
-									<li align="right">
-										<a id="signup" class="btn" href="SignUp.html"> Sign Up/Login <span
-										class="glyphicon glyphicon-user"></span> </a>
-										<form class="navbar-form navbar-right">
-											<div class="form-group">
-												<input type="text" class="form-control"
-												placeholder="Search...">
-											</div>
-											<a href="Search"><span class="glyphicon glyphicon-search"></span></a>
-										</form>
-									</li>
-
-								</ul>
-							</div>
-						</div>
-					</nav>
-
-				</div>
-			</div>
-			<script>
-				window.onscroll = function() {
-					var x = document.getElementById("cover").height;
-					var y = document.getElementById("mainnav").height;
-					y = 2 * y;
-					if (document.body.scrollTop > x || document.documentElement.scrollTop > x) {
-
-						document.getElementById("coverround").style = "padding-bottom:150px";
-						document.getElementById("mainnav").className = "navbar navbar-fixed-top";
-					} else {
-						document.getElementById("coverround").style = "padding-bottom:0px;position:relative;z-index:100";
-						document.getElementById("mainnav").className = "navbar navbar-default";
-						document.getElementById("mainnav").style = "z-index:100;";
-					}
-				};
-			</script>
 	</head>
-	<!-- Sidenav/menu -->
-	<nav class="w3-sidenav w3-white w3-collapse w3-top w3-topnav navbar-collapse" style="z-index:3;width:250px; " id="mySidenav">
-		<p>
-			&nbsp;
-		</p>
-		<p>
-			&nbsp;
-		</p>
-		<p>
-			&nbsp;
-		</p>
-		<p>
-			&nbsp;
-		</p>
-		<p>
-			&nbsp;
-		</p>
-		<p>
-			&nbsp;
-		</p>
-		<p>
-			&nbsp;
-		</p>
-		<p>
-			&nbsp;
-		</p>
-		<p>
-			&nbsp;
-		</p>
+	<body onload="isLogin()" class="w3-content" style="max-width:1600px">
 
-		<div class="w3-container w3-padding-16">
-			<h3 class="w3-wide"><b>TIMELINE</b></h3>
+		<div id="coverround" style="position:relative;z-index:100;">
+			<a href="laGalerie.html"><img id="cover" class="img-responsive" alt="cover" src="pictures/cover.jpg"
+			height="100%" width="100%"></a>
 		</div>
-		<div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-			<a href="#">2016</a>
-			<a href="#">2015</a>
-			<a href="#">2014</a>
-			<a href="#">2013</a>
-		</div>
-		<a href="ContactUs.html" class="w3-padding">Contact</a>
-	</nav>
 
-	<div style="padding-left: 280px">
+		<div id="mainnav" class="navbar navbar-default" style="position:relative;z-index:100;">
+			<div class="container-fluid">
 
-		<div class="blog-post">
-			<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
-				We are hiring
-			</p>
-			<p class="blog-post-meta">
-			<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
-				<i>October 26, 2016</i>
-			</p>
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target="#myNavbar">
+								<span class="icon-bar"></span><span class="icon-bar"></span><span
+								class="icon-bar"></span>
+							</button>
+							<a href="laGalerie.html"> <img class="img-rounded" alt="logo"
+							src="pictures/logo.jpg" width="100" height="100"> </a>
+						</div>
+						<div class="collapse navbar-collapse" id="myNavbar">
+							<ul class="nav navbar-nav">
+								<li>
+									<a href="Announcements.html">Announcements </a>
+								</li>
 
-			<p>
-			<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
-				To La Galerie by Galactica Patisserie ζητά να προσλάβει έμπειρο προσωπικό
+								<li class="dropdown">
+									<a class="dropdown-toggle"
+									data-toggle="dropdown" href="Categories.html">Categories <span
+									class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="birthdaycake.html">Birthday Cakes</a>
+										</li>
+										<li>
+											<a href="weddingCakes.html">Wedding Cakes</a>
+										</li>
+										<li>
+											<a href="christeningCakes.html">Christening Cakes</a>
+										</li>
+										<li>
+											<a href="#">...</a>
+										</li>
+									</ul>
+								</li>
 
-				<br>
-			<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
-				για την πιο κάτω θέση εργασίας!
-				Εάν ενδιαφέρεστε να ενταχθείτε στο ανθρώπινο δυναμικό μας,
+								<li>
+									<a href="videos.html">Videos <span
+									class="glyphicon glyphicon-film"></span></a>
+								</li>
 
-				<br>
-			<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
-				μπορείτε να αποστείλετε το βιογραφικό σας
-				σημείωμα στο
-			</p><a href="mailto:info@lagaleriepatisserie.com" target="_top">info@lagaleriepatisserie.com </a>
+								<li>
+									<a href="Forum.html">Forum <span
+									class="glyphicon glyphicon-pencil"></span></a>
+								</li>
 
-			<hr>
+								<li>
+									<a href="cityCenter.html">Find a Store <span
+									class="glyphicon glyphicon-globe"></span></a>
+								</li>
 
-			<div class="col-sm-12">
-				<a tabindex="-1" href="#"> <img class="img-responsive" src="pictures/announcment(1).jpg"/> </a>
+								<li>
+									<a href="ContactUs.html"> Contact Us <span
+									class="glyphicon glyphicon-phone-alt"></span></a>
+								</li>
+
+							</ul>
+
+							<ul class="navbar-nav navbar-right"></ul>
+							<ul class="nav navbar-nav navbar-right btn-group-vertical">
+
+								<li align="right">
+									<a id="signup" class="btn" href="SignUp.html"> Sign Up/Login <span
+									class="glyphicon glyphicon-user"></span> </a>
+									<form class="navbar-form navbar-right">
+										<div class="form-group">
+											<input type="text" class="form-control"
+											placeholder="Search...">
+										</div>
+										<a href="Search"><span class="glyphicon glyphicon-search"></span></a>
+									</form>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</nav>
+
 			</div>
 		</div>
+		<script>
+			window.onscroll = function() {
+				var x = document.getElementById("cover").height;
+				var y = document.getElementById("mainnav").height;
+				y = 2 * y;
+				if (document.body.scrollTop > x || document.documentElement.scrollTop > x) {
+					document.getElementById("coverround").style = "padding-bottom:150px";
+					document.getElementById("mainnav").className = "navbar navbar-fixed-top";
+					document.getElementById("dates").style = "padding-left: 40px; padding-top: " + (10) + "px; position:fixed;";
 
-		<p>
-			&nbsp;
-		</p>
+				} else {
+					document.getElementById("coverround").style = "padding-bottom:0px;position:relative;z-index:100";
+					document.getElementById("mainnav").className = "navbar navbar-default";
+					document.getElementById("mainnav").style = "z-index:100;";
+					document.getElementById("dates").style = "padding-left: 40px; padding-top: 10px; position:fixed;";
+				}
+			};
+		</script>
 
-		<div class="blog-post">
-			<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
-				We are hiring
-			</p>
-			<p class="blog-post-meta">
-			<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
-				<i>May 4, 2016</i>
-			</p>
-			<p>
-			<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
-				To La Galerie by Galactica Patisserie ζητά να προσλάβει προσωπικό
+		<div id="dates" style="padding-left: 40px; padding-top: 10px; position:fixed; opacity: 0;">
+			<div style="width:200px;height:500px; ">
+				<h3>
+				<p style="color:white;" >
+					TIMELINE
+				</p></h3>
+				<h4><a href="#" style="color:white;">2016 </a></h4>
+				<h4><a href="#" style="color:white;">2015 </a></h4>
+				<h4><a href="#" style="color:white;">2014 </a></h4>
+				<h4><a href="#" style="color:white;">2013 </a></h4>
+				<h4><a href="#" style="color:white;">Others..  </a></h4>
 
-				<br>
-			<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
-				για την πιο κάτω θέση εργασίας!
-				Εάν ενδιαφέρεστε να ενταχθείτε στο ανθρώπινο δυναμικό μας,
+			</div>
+			<a href="ContactUs.html" class="w3-padding" >Contact</a>
+		</div>
+		<div style="padding-left:350px">
 
-				<br>
-			<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
-				μπορείτε να αποστείλετε το βιογραφικό σας
-				σημείωμα στο
-				<a href="mailto:info@lagaleriepatisserie.com" target="_top">info@lagaleriepatisserie.com</a>
+			<div class="blog-post">
 
-				<hr>
-				<div class="col-sm-12">
-					<a tabindex="-1" href="#"> <img class="img-responsive" src="pictures/announcment(2).jpg" /> </a>
+				<div class="blog-post">
+					<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+						We are hiring
+					</p>
+					<p class="blog-post-meta">
+					<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+						<i>October 26, 2016</i>
+					</p>
+
+					<p>
+					<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+						To La Galerie by Galactica Patisserie ζητά να προσλάβει έμπειρο προσωπικό
+
+						<br>
+					<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+						για την πιο κάτω θέση εργασίας!
+						Εάν ενδιαφέρεστε να ενταχθείτε στο ανθρώπινο δυναμικό μας,
+
+						<br>
+					<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+						μπορείτε να αποστείλετε το βιογραφικό σας
+						σημείωμα στο
+					</p><a href="mailto:info@lagaleriepatisserie.com" target="_top">info@lagaleriepatisserie.com </a>
+
+					<hr>
+
+					<div class="col-sm-12">
+						<a tabindex="-1" href="#"> <img class="img-responsive" src="pictures/announcment(1).jpg"/> </a>
+					</div>
 				</div>
-		</div>
 
-		<p>
-			&nbsp;
-		</p>
+				<p>
+					&nbsp;
+				</p>
 
-		<!--
-		<div class="blog-post">
-		<h3 class="blog-post-title">Έκθεση Γάμου</h3>
-		<p class="blog-post-meta">
-		<i>Jan 4, 2016</i>
-		</p>
-		<p>
-		To La Galerie by Galactica Patisserie ζητά να προσλάβει προσωπικό
-		<br>
-		για την πιο κάτω θέση εργασίας!
-		Εάν ενδιαφέρεστε να ενταχθείτε στο ανθρώπινο δυναμικό μας,
-		<br>
-		μπορείτε να αποστείλετε το βιογραφικό σας
-		σημείωμα στο <a href="mailto:info@lagaleriepatisserie.com" target="_top">info@lagaleriepatisserie.com</a>
-		</p>
+				<div class="blog-post">
+					<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+						We are hiring
+					</p>
+					<p class="blog-post-meta">
+					<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+						<i>May 4, 2016</i>
+					</p>
+					<p>
+					<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+						To La Galerie by Galactica Patisserie ζητά να προσλάβει προσωπικό
 
-		<hr>
-		<div class="col-sm-12">
-		<a tabindex="-1" href="#"> <img class="img-responsive" src="pictures/announcement(3).jpg" /> </a>
+						<br>
+					<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+						για την πιο κάτω θέση εργασίας!
+						Εάν ενδιαφέρεστε να ενταχθείτε στο ανθρώπινο δυναμικό μας,
+
+						<br>
+					<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+						μπορείτε να αποστείλετε το βιογραφικό σας
+						σημείωμα στο
+						<a href="mailto:info@lagaleriepatisserie.com" target="_top">info@lagaleriepatisserie.com</a>
+
+						<hr>
+						<div class="col-sm-12">
+							<a tabindex="-1" href="#"> <img class="img-responsive" src="pictures/announcment(2).jpg" /> </a>
+						</div>
+				</div>
+			</div>
 		</div>
-		</div>
-		</div>
-		-->
+		<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootstrap-select.min.js"></script>
 		<script>
 			// Accordion
 			function myAccFunc() {
@@ -309,6 +265,6 @@
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="js/bootstrap-select.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-	</div>
 	</body>
+
 </html>
