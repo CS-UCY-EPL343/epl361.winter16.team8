@@ -32,6 +32,7 @@
 	</head>
 	<body onload="isLogin()">
 		<script src="js/login.js"></script>
+		<script src="js/cart.js"></script><!--- PANAXAS-->
 
 		<div id="coverround" style="padding-bottom:0px">
 			<a href="laGalerie.html"><img id="cover" class="img-responsive" alt="cover" src="pictures/cover.jpg"
@@ -150,9 +151,9 @@
 						</ol>
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-								<img class="first-slide center-block"
+								<img id="picture" class="first-slide center-block"
 								src="pictures/boys(2).jpg"
-								alt="First slide">
+								alt="First slide"><!--- PANAXAS-->
 							</div>
 						</div>
 						<a class="left carousel-control" href="#myCarousel" role="button"
@@ -164,22 +165,22 @@
 				</div>
 				<!---->
 				<div class="col-xs-8 col-lg-4">
-					<h1 class="center-block" style="color:white;">Θέμα Εκσκαφέας</h1>
+					<h1 id="name" class="center-block" style="color:white;">Θέμα Εκσκαφέας</h1><!--- PANAXAS-->
 					<br>
 					<br>
 					<p style="color:white;">Μια γευστική τούρτα με θέμα εκσκαφέα για τους μικρούς μας εργολάβους. Μπορεί να 
 						γίνει είτε με πραλίνα είτε με παντεσπάνη βανίλια </p>
 					<br>
-					<h4 style="color:white;">€2.25</h4>
-					<button id="cart">Add to cart</button>
-					<input id="fff" name="quantity" type="number" value="1" onchange="calculateTotal()"/>
+					<h4 id="price" style="color:white;">€2.25</h4><!--- PANAXAS-->
+					<button id="cart" onclick="addtoCart()">Add to cart</button><!--- PANAXAS-->
+					<input id="quantity" name="quantity" type="number" value="1" onchange="calculateTotal()"/><!--- PANAXAS-->
 				</div>
 				<div class="col-xs-6 col-lg-4">
 					<h2 id="totp" style="color:white;">TOTAL PRICE: €2.25</h2>
 					<br>
 					<br>
 					<li style="color: white">
-					<a href="3DCakesForBoys.html"><strong><u> 3D Cakes For Boys</u></strong></a></li>
+					<a id="link" href="3DCakesForBoys.html"><strong><u> 3D Cakes For Boys</u></strong></a></li><!--- PANAXAS-->
 				</div>
 			</div>
 		</div>
@@ -188,7 +189,7 @@
 			var total_price = 2.25;
 			
 			function calculateTotal(){
-				total_price = price*document.getElementById("fff").value;
+				total_price = price*document.getElementById("quantity").value;
 				var a = total_price.toFixed(2);
 				document.getElementById("totp").innerHTML="TOTAL PRICE: €"+a;
 			}
