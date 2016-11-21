@@ -151,7 +151,7 @@
 						</ol>
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-								<img class="first-slide center-block"
+								<img id="picture" class="first-slide center-block"
 								src="pictures/wedding6.jpg"
 								alt="First slide">
 							</div>
@@ -165,24 +165,32 @@
 				</div>
 				<!---->
 				<div class="col-xs-8 col-lg-4">
-					<h1 class="center-block" style="color:white;">Wedding Cake VI</h1>
+					<h1 id="name" class="center-block" style="color:white;">Wedding Cake VI</h1>
 					<br>
 					<br>
 					<p style="color:white;">Μια γευστική τούρτα όπου η νύμφη θα είναι η έκπληξη της βραδιάς. Μπορεί να 
 						γίνει είτε με πραλίνα είτε με παντεσπάνη βανίλια </p>
 					<br>
-					<h4 style="color:white;">€2.25</h4>
-					<button id="cart">Add to cart</button>
-					<input id="fff" name="quantity" type="number" value="1" onchange="calculateTotal()"/>
+					<h4 id="price" style="color:white;">€2.25</h4>
+					<button id="cart" onclick="addtoCart()">Add to cart</button>
+					<input id="quartity" name="quantity" type="number" value="1" onchange="calculateTotal()"/>
 				</div>
 				<div class="col-xs-6 col-lg-4">
 					<h2 id="totp" style="color:white;">TOTAL PRICE: €2.25</h2>
 					<br>
 					<br>
 					<li style="color: white">
-					<a href="weddingCakes.html"><strong><u> Wedding Cakes</u></strong></a></li>
+					<a id="link" href="weddingCakes.html"><strong><u> Wedding Cakes</u></strong></a></li>
 				</div>
 			</div>
+			<footer>
+				<p class="pull-right">
+					<a href="#" style="color:white;">Back to top</a>
+				</p>
+				<p style="color:white;">
+					&copy; 2016 La Galerie Patisserie by Galactica &middot; <a href="#" style="color:white;">Privacy</a> &middot; <a href="#" style="color:white;">Terms</a>
+				</p>
+			</footer>
 		</div>
 		<script>
 			var price = 2.25;
