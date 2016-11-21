@@ -39,8 +39,7 @@
 					xfbml : true,
 					version : 'v2.8'
 				});
-			};
-			( function(d, s, id) {
+			}; ( function(d, s, id) {
 					var js,
 					    fjs = d.getElementsByTagName(s)[0];
 					if (d.getElementById(id)) {
@@ -191,7 +190,7 @@
 						<div class="panel-body">
 							<div class="row">
 								<div class="col-lg-12">
-									<form id="login-form" action="http://phpoll.com/login/process" method="post" role="form" style="display: block;">
+									<form id="login-form"  method="post" role="form" style="display: block;">
 										<div class="form-group">
 											<input type="text" name="Email Address" id="Email Address" tabindex="1" class="form-control" placeholder="Email Address" value="">
 										</div>
@@ -213,13 +212,13 @@
 											<div class="row">
 												<div class="col-lg-12">
 													<div class="text-center">
-														<a href="http://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
+														<a href="#" tabindex="5" class="forgot-password">Forgot Password?</a>
 													</div>
 												</div>
 											</div>
 										</div>
 									</form>
-									<form id="register-form" action="http://phpoll.com/register/process" method="post" role="form" style="display: none;">
+									<form id="register-form"  method="post" role="form" style="display: none;">
 										<div class="form-group">
 											<input type="text" name="Name" id="Name" tabindex="1" class="form-control" placeholder="Name" value="">
 										</div>
@@ -261,12 +260,28 @@
 										<div class="form-group">
 											<div class="row">
 												<div class="col-sm-6 col-sm-offset-3">
-													<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+													<input onclick="registered()" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+
 												</div>
 											</div>
 										</div>
 									</form>
-									<form id="registerfb-form" action="#" method="post" role="form" style="display: none;">
+									<script>
+										function registered() {
+											var name = document.getElementById("Name").value;
+											var surname = document.getElementById("Surname").value;
+											var dob = document.getElementById("Date of birth").value;
+											var sex = document.getElementById("SEX").value;
+											var address = document.getElementById("Address").value;
+											var city = document.getElementById("City").value;
+											var pc = document.getElementById("Postal Code").value;
+											var mp = document.getElementById("Mobile Number").value;
+											var email = document.getElementById("email").value;
+											alert('Your information are:\n\n' + 'Name: ' + name + '\nSurname: ' + surname + "\nDate of Birth: " + dob + '\nSex: ' + sex + '\nAddress: ' + address + '\nCity: ' + city + '\nPostal Code: ' + pc + '\nMobile Number: ' + mp + '\nEmail: ' + email + '\n\nDatabase not yet integrated to save these values!');
+											window.location.href = "laGalerie.html";
+										}
+									</script>
+									<form id="registerfb-form" method="post" role="form" style="display: none;">
 
 										<script>
 											// This is called with the results from from FB.getLoginStatus().
@@ -356,7 +371,23 @@
 										the FB.login() function when clicked.
 										-->
 										<div align = "center">
-											<div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false"></div>
+											<!--button onclick="createPopup()" class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false">
+											</button>
+											<script>
+											function createPopup(){
+											alert('Hello');
+											}
+											</script-->
+
+											<a href="javascript:error();"><img src="pictures/facebook-login-blue.png" class="img-responsive" /></a>
+
+											<script>
+												function error() {
+													alert('Facebook not yet integrated in our website!');
+													window.location.href = "laGalerie.html";
+												}
+											</script>
+
 										</div>
 										<div id="status"></div>
 
@@ -375,7 +406,6 @@
 				</div>
 			</div>
 			<!-- FOOTER -->
-
 
 			<footer>
 				<p class="pull-right">
