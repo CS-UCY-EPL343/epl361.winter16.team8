@@ -25,18 +25,19 @@
 				background-color: rgb(25, 25, 25);
 				background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)), url("pictures/askisi1.jpg");
 				background-repeat: no-repeat;
-				background-size: 100% 150vh;
-				background-attachment: scroll;
+				background-size: 100% 100%;
+				background-attachment: fixed;
 			}
 		</style>
 
 	</head>
-	<body>
-
+	<body onload="isLogin()">
+		<script src="js/login.js"></script>
 		<div id="coverround" style="padding-bottom:0px">
 			<a href="laGalerie.html"><img id="cover" class="img-responsive" alt="cover" src="pictures/cover.jpg"
 			height="100%" width="100%"></a>
 		</div>
+
 
 		<div id="mainnav" class="navbar navbar-default">
 			<div class="container-fluid">
@@ -100,7 +101,7 @@
 
 							</ul>
 
-							<div class="nav navbar-nav navbar-right btn-group-vertical" role="group">
+							<div id="signup" class="nav navbar-nav navbar-right btn-group-vertical" role="group">
 
 								<li align="right">
 									<a href="SignUp.html"> Sign Up/Login <span
@@ -117,37 +118,6 @@
 
 							</div>
 
-							<!--div class="nav navbar-nav navbar-right btn-group-vertical" role="group">
-
-							<div class="btn-group" role="group">
-							<!-- .btn-group -->
-							<!--button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Welcome, Admin!
-							<span class="caret"></span>
-							</button>
-							<!-- Dropdown Menu created using class "dropdown-menu" -->
-							<!--ul class="dropdown-menu">
-							<!-- Dropdown list items using class "dropdown-item" -->
-							<!--li>
-							<a href="#">Cart</a>
-							</li>
-							<li>
-							<a href="#">Order History</a>
-							</li>
-							<li>
-							<a href="#">Settings</a>
-							</li>
-							<li>
-							<a href="#">Logout</a>
-							</li>
-							</ul>
-							</div>
-							<form>
-							<div class="form-group">
-							<input type="text" class="form-control" placeholder="Search..." />
-							</div>
-							</form>
-							</div-->
 						</div>
 					</div>
 				</nav>

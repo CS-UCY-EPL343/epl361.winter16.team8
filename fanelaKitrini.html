@@ -25,13 +25,13 @@
 				background-color: rgb(25, 25, 25);
 				background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)), url("pictures/askisi1.jpg");
 				background-repeat: no-repeat;
-				background-size: 100% 100vh;
-				background-attachment: scroll;
+				background-size: 100% 100%;
+				background-attachment: fixed;
 			}
 		</style>
 	</head>
-	<script src="js/login.js"></script>
 	<body onload="isLogin()">
+		<script src="js/login.js"></script>
 
 		<div id="coverround" style="padding-bottom:0px">
 			<a href="laGalerie.html"><img id="cover" class="img-responsive" alt="cover" src="pictures/cover.jpg"
@@ -100,15 +100,13 @@
 
 							</ul>
 
-							<ul class="navbar-nav navbar-right"></ul>
-							<ul class="nav navbar-nav navbar-right btn-group-vertical">
+							<div id="signup" class="nav navbar-nav navbar-right btn-group-vertical" role="group">
 
 								<li align="right">
-									<button id="signup" href="SignUp.html">
-										Sign Up/Login <span
-										class="glyphicon glyphicon-user"></span>
-									</button>
-									<form class="navbar-form navbar-right">
+									<a href="SignUp.html"> Sign Up/Login <span
+									class="glyphicon glyphicon-user"></span></a>
+
+									<form class="navbar-form navbar-right btn-group-vertical" role="group">
 										<div class="form-group">
 											<input type="text" class="form-control"
 											placeholder="Search...">
@@ -117,7 +115,7 @@
 									</form>
 								</li>
 
-							</ul>
+							</div>
 						</div>
 					</div>
 				</nav>
