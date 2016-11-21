@@ -197,7 +197,7 @@
 			var total_price = 2.25;
 			
 			function calculateTotal(){
-				total_price = price*document.getElementById("fff").value;
+				total_price = price*document.getElementById("quantity").value;
 				var a = total_price.toFixed(2);
 				document.getElementById("totp").innerHTML="TOTAL PRICE: €"+a;
 			}

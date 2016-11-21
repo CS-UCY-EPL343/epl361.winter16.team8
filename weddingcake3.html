@@ -174,7 +174,7 @@
 					<br>
 					<h4 id="price" style="color:white;">€2.25</h4>
 					<button id="cart" onclick="addtoCart()">Add to cart</button>
-					<input id="quartity" name="quantity" type="number" value="1" onchange="calculateTotal()"/>
+					<input id="quantity" name="quantity" type="number" value="1" onchange="calculateTotal()"/>
 				</div>
 				<div class="col-xs-6 col-lg-4">
 					<h2 id="totp" style="color:white;">TOTAL PRICE: €2.25</h2>
@@ -198,7 +198,7 @@
 			var total_price = 2.25;
 			
 			function calculateTotal(){
-				total_price = price*document.getElementById("fff").value;
+				total_price = price*document.getElementById("quantity").value;
 				var a = total_price.toFixed(2);
 				document.getElementById("totp").innerHTML="TOTAL PRICE: €"+a;
 			}
