@@ -9,7 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title>Announcements</title>
-
+	
 		<!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -33,15 +33,17 @@
 				background-color: rgb(25, 25, 25);
 				background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)), url("pictures/askisi1.jpg");
 				background-repeat: repeat-y;
-				background-size: 100% 100%;
-				background-attachment: fixed;
+				background-size: 100% 150vh;
+				background-attachment: scroll;
 			}
 		</style>
 	</head>
 
-	<body onload="isLogin()">
-		<script src="js/login.js"></script>
-		<div id="coverround" style="padding-bottom:0px">
+
+	
+	<body>
+	<div id="coverround" style="padding-bottom:0px">
+		
 			<a href="laGalerie.html"><img id="cover" class="img-responsive" alt="cover" src="pictures/cover.jpg"
 			height="100%" width="100%"></a>
 		</div>
@@ -108,13 +110,13 @@
 
 							</ul>
 
-							<div id="signup" class="nav navbar-nav navbar-right btn-group-vertical" role="group">
+							<ul class="navbar-nav navbar-right"></ul>
+							<ul class="nav navbar-nav navbar-right btn-group-vertical">
 
 								<li align="right">
 									<a href="SignUp.html"> Sign Up/Login <span
 									class="glyphicon glyphicon-user"></span></a>
-
-									<form class="navbar-form navbar-right btn-group-vertical" role="group">
+									<form class="navbar-form navbar-right">
 										<div class="form-group">
 											<input type="text" class="form-control"
 											placeholder="Search...">
@@ -123,7 +125,7 @@
 									</form>
 								</li>
 
-							</div>
+							</ul>
 						</div>
 					</div>
 				</nav>
@@ -131,6 +133,7 @@
 			</div>
 		</div>
 		</head>
+		
 		<script>
 			window.onscroll = function() {
 				var x = document.getElementById("cover").height;
@@ -146,49 +149,57 @@
 				}
 			};
 		</script>
+		
 	<body>
 		<div>
+			
+		
 			<header>
 
-				<p class="lead" style="font-size: 40px; text-align:center; color:white; "> Forum </p>
+				<p class="lead" style="font-size: 40px; text-align:center; color:white; "> Forums </p>
 
 				<!--- TESTING --->
 				<div role="main" id="yui_3_17_2_1_1479409776212_118">
-					<span id="maincontent"></span><h2 id="yui_3_17_2_1_1479409776212_117"><p class="lead" style="font-size: 30px; text-align:justify; color:white; ">News forum</p></h2>
+					<span id="maincontent"></span><h2 id="yui_3_17_2_1_1479409776212_117"><p class="lead" style="font-size: 30px; text-align:center; color:white; ">News forum</p></h2>
 					<div id="intro" class="box generalbox">
 						<div class="no-overflow">
-							<i><p class="lead" style="font-size: 20px; text-align:justify; color:white; ">General news and announcements</p></i>
+							<i><p class="lead" style="font-size: 20px; text-align:center; color:white; ">General news and announcements</p></i>
 						</div>
 					</div>
 
 					<table cellspacing="0" class="forumheaderlist">
 						<thead>
 							<tr>
-								<th class="header topic" scope="col"><p class="lead" style="font-size: 18px; text-align:justify; color:white; ">Discussion</p></th>
+								
 								<th class="header discussionsubscription" scope="col"><span class="preload-subscribe">&nbsp;</span><span class="preload-unsubscribe">&nbsp;</span></th>
 							</tr>
 						</thead>
 						<tbody>
 
-							<tr class="discussion r0">
-								<td class="topic starter"><a href="ForumSubmit.html">Σχόλια για εξυπηρέτηση</a></td>
+	
+							<div class="col-md-12 text-center">
+								<a class="btn btn-primary btn-lg" type="submit" href="ForumServiceDiscussion.html">Services Forum</a>
+							</div>
+							
+						<br><br><br>
+						
+						<!---
+						<div class="col-md-12 text-center">
+								<a class="btn btn-primary btn-lg" type="submit" href="ForumOffersDiscussion.html" >Offers Forum</a>
+						</div>
+						
+						<br><br><br>
+						--->
+						
+						</br>
+						<div class="col-md-12 text-center" >
+								<a class="btn btn-primary btn-lg" type="submit" href="FAQ.html">FAQ</a>
+								
+						</div>
 
-								<!--
-								<td class="author">Admin</a></td>
-								-->
-
-								<br>
-							</tr>
-
-							<tr class="discussion r0">
-								<td class="topic starter"><a href="ForumSubmit.html">Ανακοινώσεις για προσφορές</a></td>
-
-								<!--
-								<td class="author">Admin</a></td>
-								-->
-
-								<br>
-							</tr>
+						</div>
+						
+							
 
 						</tbody>
 					</table><div class="paging"></div>
@@ -197,3 +208,15 @@
 			</header>
 
 		</div>
+
+
+<br><br><br><br><br><br><br><br>
+<!-- FOOTER -->
+			<footer>
+				<p class="pull-right">
+					<a href="#" style="color:white;">Back to top</a>
+				</p>
+				<p style="color:white;">
+					&copy; 2016 La Galerie Patisserie by Galactica &middot; <a href="#" style="color:white;">Privacy</a> &middot; <a href="#" style="color:white;">Terms</a>
+				</p>
+			</footer>

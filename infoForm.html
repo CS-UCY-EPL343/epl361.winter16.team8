@@ -40,7 +40,7 @@
 
 	<body onload="isLogin()">
 		<script src="js/login.js"></script>
-
+		<script src="js/Inform.js"></script>
 		<div id="coverround" style="padding-bottom:0px">
 			<a href="laGalerie.html"><img id="cover" class="img-responsive" alt="cover" src="pictures/cover.jpg"
 			height="100%" width="100%"></a>
@@ -71,13 +71,13 @@
 									class="caret"></span></a>
 									<ul class="dropdown-menu">
 										<li>
-											<a href="#">Birthday Cakes</a>
+											<a href="birthdaycake.html">Birthday Cakes</a>
 										</li>
 										<li>
-											<a href="#">Wedding Cakes</a>
+											<a href="weddingCakes.html">Wedding Cakes</a>
 										</li>
 										<li>
-											<a href="#">Christening Cakes</a>
+											<a href="christeningCakes.html">Christening Cakes</a>
 										</li>
 										<li>
 											<a href="#">...</a>
@@ -156,83 +156,84 @@
 									<hr>
 									<br>
 									<table style="width:100%">
+										<tr id="a">
 										<!--	<th>Firstname</th> -->
 										<td>Name</td>
-										<td style="color: #888888";>Name</td>
+										<td id ="x" style="color: #888888";>Name</td>
 										<td>
-										<button type="button" onclick=>
+										<button type="button" onclick="isInform()">
 											Edit
 										</button></td>
 										</tr>
-										<tr>
+										<tr id="b">
 											<td>Surname</td>
-											<td style="color: #888888";>Surname</td>
+											<td id="xx" style="color: #888888";>Surname</td>
 											<td>
-											<button type="button" onclick=>
+											<button type="button" onclick="Surname()">
 												Edit
 											</button></td>
 										</tr>
-										<tr>
+										<tr id="c">
 											<td>Date of birth</td>
-											<td style="color: #888888";>Date of birth</td>
+											<td id ="xxx" style="color: #888888";>Date of birth</td>
 											<td>
-											<button type="button" onclick=>
+											<button type="button" onclick="Dod()">
 												Edit
 											</button></td>
 										</tr>
-										<tr>
+										<tr id="d">
 											<td>Sex</td>
-											<td style="color: #888888";>Male</td>
+											<td  id ="ab" style="color: #888888";>Male</td>
 											<td>
-											<button type="button" onclick=>
+											<button type="button" onclick="Sex()">
 												Edit
 											</button></td>
 										</tr>
-										<tr>
+										<tr id="e">
 											<td>Address</td>
-											<td style="color: #888888";>Address</td>
+											<td id ="ba" style="color: #888888";>Address</td>
 											<td>
-											<button type="button" onclick=>
+											<button type="button" onclick="Address()">
 												Edit
 											</button></td>
 										</tr>
-										<tr>
+										<tr id="f">
 											<td>City</td>
-											<td style="color: #888888";>City</td>
+											<td id="bb" style="color: #888888";>City</td>
 											<td>
-											<button type="button" onclick=>
+											<button type="button" onclick="City()">
 												Edit
 											</button></td>
 										</tr>
-										<tr>
+										<tr id="g">
 											<td>Postal Code</td>
-											<td style="color: #888888";>Postal Code</td>
+											<td id="bc" style="color: #888888";>Postal Code</td>
 											<td>
-											<button type="button" onclick=>
+											<button type="button" onclick="Code()">
 												Edit
 											</button></td>
 										</tr>
-										<tr>
+										<tr id="h">
 											<td>Mobile Number</td>
-											<td style="color: #888888";>+357</td>
+											<td id="cc" style="color: #888888";>+357</td>
 											<td>
-											<button type="button" onclick=>
+											<button type="button" onclick="Number()">
 												Edit
 											</button></td>
 										</tr>
-										<tr>
+										<tr id="i">
 											<td>email</td>
-											<td style="color: #888888";>email</td>
+											<td id= "cd" style="color: #888888";>email</td>
 											<td>
-											<button type="button" onclick=>
+											<button type="button" onclick="Email()">
 												Edit
 											</button></td>
 										</tr>
-										<tr>
+										<tr id="j">
 											<td>password</td>
-											<td style="color: #888888";>************</td>
+											<td id= "dd" style="color: #888888";>************</td>
 											<td>
-											<button type="button" onclick=>
+											<button type="button" onclick="Password()">
 												Edit
 											</button></td>
 										</tr>
