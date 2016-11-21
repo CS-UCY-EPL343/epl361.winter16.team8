@@ -28,13 +28,13 @@
 		</style>
 	</head>
 	<body onload="isLogin()" class="w3-content">
-
+		<script src="js/login.js"></script>
 		<div id="coverround" style="position:relative;z-index:100;">
 			<a href="laGalerie.html"><img id="cover" class="img-responsive" alt="cover" src="pictures/cover.jpg"
 			height="100%" width="100%"></a>
 		</div>
 
-		<div id="mainnav" class="navbar navbar-default" style="position:relative;z-index:100;">
+		<div id="mainnav" class="navbar navbar-default" style="z-index:100;">
 			<div class="container-fluid">
 
 				<nav class="navbar navbar-default">
@@ -96,13 +96,13 @@
 
 							</ul>
 
-							<ul class="navbar-nav navbar-right"></ul>
-							<ul class="nav navbar-nav navbar-right btn-group-vertical">
+							<div id="signup" class="nav navbar-nav navbar-right btn-group-vertical" role="group">
 
 								<li align="right">
-									<a id="signup" class="btn" href="SignUp.html"> Sign Up/Login <span
-									class="glyphicon glyphicon-user"></span> </a>
-									<form class="navbar-form navbar-right">
+									<a href="SignUp.html"> Sign Up/Login <span
+									class="glyphicon glyphicon-user"></span></a>
+
+									<form class="navbar-form navbar-right btn-group-vertical" role="group">
 										<div class="form-group">
 											<input type="text" class="form-control"
 											placeholder="Search...">
@@ -111,7 +111,7 @@
 									</form>
 								</li>
 
-							</ul>
+							</div>
 						</div>
 					</div>
 				</nav>
@@ -119,6 +119,12 @@
 			</div>
 		</div>
 		<script>
+			function extraScroll(a) {
+				document.getElementById(a).scrollIntoView();
+				window.scrollBy(0, -100);
+			}
+
+
 			window.onscroll = function() {
 				var x = document.getElementById("cover").height;
 				var y = document.getElementById("mainnav").height;
@@ -140,21 +146,21 @@
 		<div id="dates" style="background:rgb(210, 210, 210); padding-left: 40px; padding-top: 0px; position:fixed; ">
 			<div style="width:200px;height:400px; ">
 				<h3>
-				<p style="color:white;" >
+				<p style="color:#000000;" >
 					TIMELINE
 				</p></h3>
-				<h4><a href="#" style="color:white;">2016 </a></h4>
-				<h4><a href="#" style="color:white;">2015 </a></h4>
-				<h4><a href="#" style="color:white;">2014 </a></h4>
-				<h4><a href="#" style="color:white;">2013 </a></h4>
-				<h4><a href="#" style="color:white;">Others.. </a></h4>
-
+				<h4><a onclick="extraScroll(2016)" style="color:#000000;">2016 </a></h4>
+				<h4><a onclick="extraScroll(2015)" style="color:#000000;">2015 </a></h4>
+				<h4><a onclick="extraScroll(2014)" style="color:#000000;">2014 </a></h4>
+				<h4><a onclick="extraScroll(2013)" style="color:#000000;">2013 </a></h4>
 			</div>
 			<a href="ContactUs.html" class="w3-padding" >Contact</a>
 		</div>
 		<div style="padding-left:350px">
 
 			<div class="blog-post">
+				<h2 id="2016" style="color:white;"><b>2016</b></h2>
+				<hr>
 
 				<div class="blog-post">
 					<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
@@ -179,89 +185,148 @@
 						μπορείτε να αποστείλετε το βιογραφικό σας
 						σημείωμα στο
 					</p><a href="mailto:info@lagaleriepatisserie.com" target="_top">info@lagaleriepatisserie.com </a>
-
+					<hr>
+					<hr>
+					<h2 id="2015" style="color:white;"><b>2015</b></h2>
 					<hr>
 
-					<div class="col-sm-12">
-						<img class="img-responsive" src="pictures/announcment(1).jpg"/>
-					</div>
-				</div>
+					<div class="blog-post">
+						<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+							We are hiring
+						</p>
+						<p class="blog-post-meta">
+						<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+							<i>October 26, 2016</i>
+						</p>
 
-				<p>
-					&nbsp;
-				</p>
+						<p>
+						<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+							To La Galerie by Galactica Patisserie ζητά να προσλάβει έμπειρο προσωπικό
 
-				<div class="blog-post">
-					<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
-						We are hiring
-					</p>
-					<p class="blog-post-meta">
-					<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
-						<i>May 4, 2016</i>
-					</p>
-					<p>
-					<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
-						To La Galerie by Galactica Patisserie ζητά να προσλάβει προσωπικό
+							<br>
+						<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+							για την πιο κάτω θέση εργασίας!
+							Εάν ενδιαφέρεστε να ενταχθείτε στο ανθρώπινο δυναμικό μας,
 
-						<br>
-					<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
-						για την πιο κάτω θέση εργασίας!
-						Εάν ενδιαφέρεστε να ενταχθείτε στο ανθρώπινο δυναμικό μας,
-
-						<br>
-					<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
-						μπορείτε να αποστείλετε το βιογραφικό σας
-						σημείωμα στο
-						<a href="mailto:info@lagaleriepatisserie.com" target="_top">info@lagaleriepatisserie.com</a>
-
+							<br>
+						<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+							μπορείτε να αποστείλετε το βιογραφικό σας
+							σημείωμα στο
+						</p><a href="mailto:info@lagaleriepatisserie.com" target="_top">info@lagaleriepatisserie.com </a>
 						<hr>
-						<div class="col-sm-12">
-							<img class="img-responsive" src="pictures/announcment(2).jpg" />
+						<hr>
+						<h2 id="2014" style="color:white;"><b>2014</b></h2>
+						<hr>
+
+						<div class="blog-post">
+							<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+								We are hiring
+							</p>
+							<p class="blog-post-meta">
+							<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+								<i>October 26, 2016</i>
+							</p>
+
+							<p>
+							<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+								To La Galerie by Galactica Patisserie ζητά να προσλάβει έμπειρο προσωπικό
+
+								<br>
+							<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+								για την πιο κάτω θέση εργασίας!
+								Εάν ενδιαφέρεστε να ενταχθείτε στο ανθρώπινο δυναμικό μας,
+
+								<br>
+							<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+								μπορείτε να αποστείλετε το βιογραφικό σας
+								σημείωμα στο
+							</p><a href="mailto:info@lagaleriepatisserie.com" target="_top">info@lagaleriepatisserie.com </a>
+							<hr>
+							<hr>
+							<h2 id="2013" style="color:white;"><b>2013</b></h2>
+							<hr>
+
+							<div class="blog-post">
+								<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+									We are hiring
+								</p>
+								<p class="blog-post-meta">
+								<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+									<i>October 26, 2016</i>
+								</p>
+
+								<p>
+								<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+									To La Galerie by Galactica Patisserie ζητά να προσλάβει έμπειρο προσωπικό
+
+									<br>
+								<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+									για την πιο κάτω θέση εργασίας!
+									Εάν ενδιαφέρεστε να ενταχθείτε στο ανθρώπινο δυναμικό μας,
+
+									<br>
+								<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+									μπορείτε να αποστείλετε το βιογραφικό σας
+									σημείωμα στο
+								</p><a href="mailto:info@lagaleriepatisserie.com" target="_top">info@lagaleriepatisserie.com </a>
+								<hr>
+								<hr>
+
+								<div class="col-sm-12">
+									<img class="img-responsive" src="pictures/announcment(1).jpg"/>
+								</div>
+							</div>
+
+							<p>
+								&nbsp;
+							</p>
+
+							<div class="blog-post">
+								<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+									We are hiring
+								</p>
+								<p class="blog-post-meta">
+								<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+									<i>May 4, 2016</i>
+								</p>
+								<p>
+								<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+									To La Galerie by Galactica Patisserie ζητά να προσλάβει προσωπικό
+
+									<br>
+								<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+									για την πιο κάτω θέση εργασίας!
+									Εάν ενδιαφέρεστε να ενταχθείτε στο ανθρώπινο δυναμικό μας,
+
+									<br>
+								<p class="lead" style="font-size: 16px; text-align: justify; color:white; ">
+									μπορείτε να αποστείλετε το βιογραφικό σας
+									σημείωμα στο
+									<a href="mailto:info@lagaleriepatisserie.com" target="_top">info@lagaleriepatisserie.com</a>
+
+									<hr>
+									<div class="col-sm-12">
+										<img class="img-responsive" src="pictures/announcment(2).jpg" />
+									</div>
+									<hr>
+							</div>
 						</div>
-				</div>
-			</div>
-		</div>
+					</div>
 
-		<script>
-			// Accordion
-			function myAccFunc() {
-				var x = document.getElementById("demoAcc");
-				if (x.className.indexOf("w3-show") == -1) {
-					x.className += " w3-show";
-				} else {
-					x.className = x.className.replace(" w3-show", "");
-				}
-			}
+					<!-- FOOTER -->
+					<footer class="col-lg-12">
+						<p class="pull-right">
+							<a href="#" style="color:white;">Back to top</a>
+						</p>
+						<p style="color:white;">
+							&copy; 2016 La Galerie Patisserie by Galactica &middot; <a href="#" style="color:white;">Privacy</a> &middot; <a href="#" style="color:white;">Terms</a>
+						</p>
+					</footer>
 
-			// Click on the "Jeans" link on page load to open the accordion for demo purposes
-			document.getElementById("myBtn").click();
-
-			// Script to open and close sidenav
-			function w3_open() {
-				document.getElementById("mySidenav").style.display = "block";
-				document.getElementById("myOverlay").style.display = "block";
-			}
-
-			function w3_close() {
-				document.getElementById("mySidenav").style.display = "none";
-				document.getElementById("myOverlay").style.display = "none";
-			}
-		</script>
-		<!-- FOOTER -->
-		<footer class="col-lg-12">
-			<p class="pull-right">
-				<a href="#" style="color:white;">Back to top</a>
-			</p>
-			<p style="color:white;">
-				&copy; 2016 La Galerie Patisserie by Galactica &middot; <a href="#" style="color:white;">Privacy</a> &middot; <a href="#" style="color:white;">Terms</a>
-			</p>
-		</footer>
-
-		<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="js/bootstrap-select.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/login.js"></script>
+					<script
+					src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+					<script src="js/bootstrap-select.min.js"></script>
+					<script src="js/bootstrap.min.js"></script>
 
 	</body>
 

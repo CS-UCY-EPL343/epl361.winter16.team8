@@ -20,7 +20,8 @@
 
 	</head>
 
-	<body>
+	<body onload="isLogin()">
+		<script src="js/login.js"></script>
 		<div>
 			<nav>
 				<html lang="en">
@@ -53,8 +54,7 @@
 									xfbml : true,
 									version : 'v2.8'
 								});
-							};
-							( function(d, s, id) {
+							}; ( function(d, s, id) {
 									var js,
 									    fjs = d.getElementsByTagName(s)[0];
 									if (d.getElementById(id)) {
@@ -149,13 +149,13 @@
 
 											</ul>
 
-											<ul class="navbar-nav navbar-right"></ul>
-											<ul class="nav navbar-nav navbar-right btn-group-vertical">
+											<div id="signup" class="nav navbar-nav navbar-right btn-group-vertical" role="group">
 
 												<li align="right">
 													<a href="SignUp.html"> Sign Up/Login <span
 													class="glyphicon glyphicon-user"></span></a>
-													<form class="navbar-form navbar-right">
+
+													<form class="navbar-form navbar-right btn-group-vertical" role="group">
 														<div class="form-group">
 															<input type="text" class="form-control"
 															placeholder="Search...">
@@ -163,7 +163,8 @@
 														<a href="Search"><span class="glyphicon glyphicon-search"></span></a>
 													</form>
 												</li>
-											</ul>
+
+											</div>
 										</div>
 									</div>
 								</nav>
@@ -198,13 +199,13 @@
 													<hr>
 													<br>
 													<table style="width:100%">
-															<!--	<th>Firstname</th> -->
-															<td>Name</td>
-															<td style="color: #888888";>Name</td>
-															<td>
-															<button type="button" onclick=>
-																Edit
-															</button></td>
+														<!--	<th>Firstname</th> -->
+														<td>Name</td>
+														<td style="color: #888888";>Name</td>
+														<td>
+														<button type="button" onclick=>
+															Edit
+														</button></td>
 														</tr>
 														<tr>
 															<td>Surname</td>
