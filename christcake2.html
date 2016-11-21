@@ -17,7 +17,7 @@
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		
+
 		<style>
 			body, h1, h2, h3, h4, h5, h6, .w3-wide {
 				font-family: "Montserrat", sans-serif;
@@ -33,6 +33,7 @@
 	</head>
 	<body onload="isLogin()">
 		<script src="js/login.js"></script>
+		<script src="js/cart.js"></script>
 
 		<div id="coverround" style="padding-bottom:0px">
 			<a href="laGalerie.html"><img id="cover" class="img-responsive" alt="cover" src="pictures/cover.jpg"
@@ -138,8 +139,7 @@
 				}
 			};
 		</script>
-		
-		
+
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-3 col-lg-4">
@@ -151,7 +151,7 @@
 						</ol>
 						<div class="carousel-inner" role="listbox">
 							<div class="item active">
-								<img class="first-slide center-block"
+								<img id="picture" class="first-slide center-block"
 								src="pictures/christ2.jpg"
 								alt="First slide">
 							</div>
@@ -165,35 +165,48 @@
 				</div>
 				<!---->
 				<div class="col-xs-8 col-lg-4">
-					<h1 class="center-block" style="color:white; font-size: 33px">Βάφτιση για κορίτσι ΙΙ</h1>
+					<h1 id="name" class="center-block" style="color:white; font-size: 33px">Βάφτιση για κορίτσι ΙΙ</h1>
 					<br>
 					<br>
-					<p style="color:white;">Μια γευστική τούρτα με θέμα καρδιούλες για την ξεχωριστή μέρα της μικρής σας κόρης. Μπορεί να 
-						γίνει είτε με πραλίνα είτε με παντεσπάνη βανίλια </p>
+					<p style="color:white;">
+						Μια γευστική τούρτα με θέμα καρδιούλες για την ξεχωριστή μέρα της μικρής σας κόρης. Μπορεί να
+						γίνει είτε με πραλίνα είτε με παντεσπάνη βανίλια
+					</p>
 					<br>
-					<h4 style="color:white;">€2.25</h4>
-					<button id="cart">Add to cart</button>
-					<input id="fff" name="quantity" type="number" value="1" onchange="calculateTotal()"/>
+					<h4 id="price" style="color:white;">€2.25</h4>
+					<button id="cart" onclick="addtoCart()">
+						Add to cart
+					</button>
+					<input id="quantity" name="quantity" type="number" value="1" onchange="calculateTotal()"/>
 				</div>
 				<div class="col-xs-6 col-lg-4">
 					<h2 id="totp" style="color:white;">TOTAL PRICE: €2.25</h2>
 					<br>
 					<br>
 					<li style="color: white">
-					<a href="christeningCakes.html"><strong><u> Christening Cakes</u></strong></a></li>
+						<a id="link" href="christeningCakes.html"><strong><u> Christening Cakes</u></strong></a>
+					</li>
 				</div>
 			</div>
 		</div>
 		<script>
 			var price = 2.25;
 			var total_price = 2.25;
-			
-			function calculateTotal(){
-				total_price = price*document.getElementById("fff").value;
+
+			function calculateTotal() {
+				total_price = price * document.getElementById("quantity").value;
 				var a = total_price.toFixed(2);
-				document.getElementById("totp").innerHTML="TOTAL PRICE: €"+a;
+				document.getElementById("totp").innerHTML = "TOTAL PRICE: €" + a;
 			}
 		</script>
+		<footer>
+			<p class="pull-right">
+				<a href="#" style="color:white;">Back to top</a>
+			</p>
+			<p style="color:white;">
+				&copy; 2016 La Galerie Patisserie by Galactica &middot; <a href="#" style="color:white;">Privacy</a> &middot; <a href="#" style="color:white;">Terms</a>
+			</p>
+		</footer>
 		<!-- /.carousel -->
 
 		<!-- /.container -->
