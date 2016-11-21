@@ -17,7 +17,9 @@ function logout(){
 	localStorage.islogin="false";
 	window.location.href = "laGalerie.html";
 }
-
+function popup(){
+	alert('Not yet implemented!');
+}
 function tryLogin(){
 	if((document.getElementById("email_address").value == "admin")
 	&& document.getElementById("password").value == "admin"){
@@ -43,7 +45,7 @@ function isLogin(){
 						"<a href=\"cart.html\">Cart</a>"+
 					"</li>"+
 					"<li>"+
-						"<a href=\"#\">Order History</a>"+
+						"<a href=\"javascript:popup()\">Order History</a>"+
 					"</li>"+
 					"<li>"+
 						"<a href=\"infoForm.html\">Settings</a>"+
