@@ -1,23 +1,36 @@
-localStorage.islogin=boolean(true);
+//localStorage.islogin="false";
+//localStorage.incorrect="false";
 
 function visibility(){
 	
 	/*product.html file's variables*/
-	if(islogin) return;
+	if(localStorage.islogin=="true") return;
 	document.getElementById("cart").style.display="none";
 	document.getElementById("totp").style.display="none";
 	document.getElementById("fff").style.display="none";
 }
 function login(){
-	islogin = true;
+	localStorage.islogin="true";
 	window.location.href = "laGalerie.html";
 }
 function logout(){
-	islogin = false;
+	localStorage.islogin="false";
 	window.location.href = "laGalerie.html";
 }
+
+function tryLogin(){
+	if((document.getElementById("email_address").value == "admin")
+	&& document.getElementById("password").value == "admin"){
+		login();
+	}
+	else{
+		window.location.href = "SignUp.html";
+		document.getElementById("incorrect").outerHTML="<p id=\"incorrect\" style=\"color: #ff0000\">Incorrect Email and Password Combination</p>";
+	}
+}
+
 function isLogin(){
-	if (islogin)
+	if (localStorage.islogin=="true")
 		document.getElementById("signup").outerHTML=""+
 		"<div id=\"signup\" class=\"nav navbar-nav navbar-right btn-group-vertical\" role=\"group\">"+
 			"<div class=\"btn-group\" role=\"group\">"+
@@ -61,7 +74,7 @@ function isLogin(){
 			"</li>"+
 		"</div>";
 	
-	visibility();	
+	visibility();
 }
 
 
