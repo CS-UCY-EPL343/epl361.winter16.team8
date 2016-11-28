@@ -7,7 +7,7 @@ function visibility(){
 	if(localStorage.islogin=="true") return;
 	document.getElementById("cart").style.display="none";
 	document.getElementById("totp").style.display="none";
-	document.getElementById("fff").style.display="none";
+	document.getElementById("quantity").style.display="none";
 }
 function login(){
 	localStorage.islogin="true";
