@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>La Galerie | Cart</title>
+		<meta name="description" content="">
+		<meta name="author" content="Andreas Costi">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+
+		<style>
+			body, h1, h2, h3, h4, h5, h6, .w3-wide {
+				font-family: "Montserrat", sans-serif;
+			}
+			body {
+				background-color: rgb(25, 25, 25);
+				background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)), url("pictures/askisi1.jpg");
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				background-attachment: fixed;
+			}
+		</style>
+	</head>
+
+	<body onload="isLogin()">
+		<script src="js/login.js"></script>
+		<div>
+
+			<div id="coverround" style="padding-bottom:0px">
+				<a href="laGalerie.html"><img id="cover" class="img-responsive" alt="cover" src="pictures/cover.jpg"
+				height="100%" width="100%"></a>
+			</div>
+
+			<div id="mainnav" class="navbar navbar-default" style="font-size: 140%">
+				<div class="container-fluid">
+
+					<nav class="navbar navbar-default">
+						<div class="container-fluid">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse"
+								data-target="#myNavbar">
+									<span class="icon-bar"></span><span class="icon-bar"></span><span
+									class="icon-bar"></span>
+								</button>
+								<a href="laGalerie.html"> <img class="img-rounded" alt="logo"
+								src="pictures/logo.jpg" width="100" height="100"> </a>
+							</div>
+							<div class="collapse navbar-collapse" id="myNavbar">
+								<ul class="nav navbar-nav">
+									<li>
+										<a href="Announcements.html">Announcements </a>
+									</li>
+
+									<li class="dropdown">
+										<a class="dropdown-toggle"
+										data-toggle="dropdown" href="Categories.html">Categories <span
+										class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li>
+												<a href="birthdaycake.html">Birthday Cakes</a>
+											</li>
+											<li>
+												<a href="weddingCakes.html">Wedding Cakes</a>
+											</li>
+											<li>
+												<a href="christeningCakes.html">Christening Cakes</a>
+											</li>
+											<li>
+												<a href="#">...</a>
+											</li>
+										</ul>
+									</li>
+
+									<li>
+										<a href="videos.html">Videos <span
+										class="glyphicon glyphicon-film"></span></a>
+									</li>
+
+									<li>
+										<a href="Forum.html">Forum <span
+										class="glyphicon glyphicon-pencil"></span></a>
+									</li>
+
+									<li>
+										<a href="cityCenter.html">Find a Store <span
+										class="glyphicon glyphicon-globe"></span></a>
+									</li>
+
+									<li>
+										<a href="ContactUs.html"> Contact Us <span
+										class="glyphicon glyphicon-phone-alt"></span></a>
+									</li>
+
+								</ul>
+
+								<div id="signup" class="nav navbar-nav navbar-right btn-group-vertical" role="group">
+
+									<li align="right">
+										<a href="SignUp.html"> Sign Up/Login <span
+										class="glyphicon glyphicon-user"></span></a>
+
+										<form class="navbar-form navbar-right btn-group-vertical" role="group">
+											<div class="form-group">
+												<input type="text" class="form-control"
+												placeholder="Search...">
+											</div>
+											<a href="Search"><span class="glyphicon glyphicon-search"></span></a>
+										</form>
+									</li>
+								</div>
+							</div>
+						</div>
+					</nav>
+
+				</div>
+			</div>
+			<script>
+				window.onscroll = function() {
+					var x = document.getElementById("cover").height;
+					var y = document.getElementById("mainnav").height;
+					y = 2 * y;
+					if (document.body.scrollTop > x || document.documentElement.scrollTop > x) {
+
+						document.getElementById("coverround").style = "padding-bottom:150px";
+						document.getElementById("mainnav").className = "navbar navbar-fixed-top";
+					} else {
+						document.getElementById("coverround").style = "padding-bottom:0px";
+						document.getElementById("mainnav").className = "navbar navbar-default";
+					}
+				};
+			</script>
+			<!------------------------------------------------------------------------------------------------------------------->
+			<div id="w">
+				<header id="title">
+					<h1>My Shopping Basket</h1>
+				</header>
+				<div id="page">
+					<!--<style>
+					tr:nth-child(even) {
+					background-color: #dddddd;
+					}
+
+					</style>-->
+					<table id="cart">
+						<thead>
+							<tr>
+								<th class="first">Photo</th>
+								<th class="second">Product</th>
+								<th class="third">Qty</th>
+								<th class="fourth">Total</th>
+								<th class="fifth">&nbsp;</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- shopping cart contents -->
+							<tr class="productitm">
+								<!-- http://www.inkydeals.com/deal/ginormous-bundle/ -->
+								<td><img src="pictures/design-bundle-pack.png" class="thumb"></td>
+								<td>Wedding Cake</td>
+								<td>
+								<input type="number" value="1" min="0" max="99" class="qtyinput">
+								</td>
+								<td>€79.00</td>
+								<td><span class="remove"><img src="pictures/trash.png" alt="X"></span></td>
+							</tr>
+							<tr class="productitm">
+								<!-- http://www.amazon.com/Stuff-My-Cat-The-Book/dp/0811855384 -->
+								<td><img src="pictures/stuff-on-cat-book.png" class="thumb"></td>
+
+								<td>Macaroons</td>
+								<td>
+								<input type="number" value="1" min="0" max="99" class="qtyinput">
+								</td>
+								<td>€8.95</td>
+								<td><span class="remove"><img src="pictures/trash.png" alt="X"></span></td>
+							</tr>
+							<tr class="productitm">
+								<!-- http://www.amazon.com/SpongeBob-SquarePants-The-First-Episodes/dp/B002DYJTVW -->
+								<td><img src="pictures/first-100-spongebob-dvd.png" class="thumb"></td>
+
+								<td>Lava Cake</td>
+								<td>
+								<input type="number" value="1" min="0" max="99" class="qtyinput">
+								</td>
+								<td>€75.00</td>
+								<td><span class="remove"><img src="pictures/trash.png" alt="X"></span></td>
+							</tr>
+							<tr class="productitm">
+								<!-- http://www.barnesandnoble.com/w/javascript-and-jquery-david-sawyer-mcfarland/1100405042 -->
+								<td><img src="pictures/javascript-jquery-missing-manual.png" class="thumb"></td>
+
+								<td>Eclers</td>
+								<td>
+								<input type="number" value="1" min="0" max="99" class="qtyinput">
+								</td>
+								<td>$27.50</td>
+								<td><span class="remove"><img src="pictures/trash.png" alt="X"></span></td>
+							</tr>
+
+							<!-- tax + subtotal -->
+							<tr class="extracosts" style="color: #888b8d">
+								<td>Shipping &amp; Tax</td>
+								<td colspan="2" class="light"></td>
+								<td>$35.00</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr class="extracosts" style="color: #888b8d">
+								<td class="light">Discound</td>
+								<td colspan="2" class="light"></td>
+								<td>10%</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr class="totalprice" style="color: #888b8d">
+								<td class="light">Total:</td>
+								<td colspan="2">&nbsp;</td>
+								<td colspan="2"><span class="thick">$225.45</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<hr>
+				<center>
+					<a href="payment.html"><button id="submitbtn">
+						Checkout Now!
+					</button></a>
+				</center>
+				<hr>
+			</div>
+
+			<!-- FOOTER -->
+			<footer>
+				<p class="pull-right">
+					<a href="#">Back to top</a>
+				</p>
+				<p>
+					&copy; 2016 La Galerie Patisserie by Galactica &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+				</p>
+			</footer>
+
+			<!-- /.container -->
+			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+			<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+			<!-- Include all compiled plugins (below), or include individual files as needed -->
+			<script src="js/bootstrap.min.js"></script>
+
+		</div>
+	</body>
+</html>
